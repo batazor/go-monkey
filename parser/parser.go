@@ -7,15 +7,6 @@ import (
 	"github.com/batazor/go-monkey/token"
 )
 
-type Parser struct {
-	l *lexer.Lexer
-
-	errors []string
-
-	curToken  token.Token
-	peekToken token.Token
-}
-
 func New(l *lexer.Lexer) *Parser {
 	p := &Parser{
 		l:      l,
