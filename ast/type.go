@@ -33,7 +33,7 @@ type ReturnStatement struct {
 }
 
 type Identifier struct {
-	Token token.Token // the token.EDENT token
+	Token token.Token // the token.IDENT token
 	Value string
 }
 
@@ -58,4 +58,27 @@ type InfixExpression struct {
 	Left     Expression
 	Operator string
 	Right    Expression
+}
+
+type Boolean struct {
+	Token token.Token
+	Value bool
+}
+
+type IfExpression struct {
+	Token       token.Token // the 'if' token
+	Condition   Expression
+	Consequence *BlockStatement
+	Alternative *BlockStatement
+}
+
+type BlockStatement struct {
+	Token      token.Token // the `{` token
+	Statements []Statement
+}
+
+type FunctionLiteral struct {
+	Token      token.Token // The 'fn' token
+	Parameters []*Identifier
+	Body       *BlockStatement
 }
