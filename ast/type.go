@@ -88,3 +88,8 @@ type CallExpression struct {
 	Function  Expression  // Identifier or FunctionLitereal
 	Arguments []Expression
 }
+
+type StringLiteral struct {
+	Token token.Token
+	Value string
+}
