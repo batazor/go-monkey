@@ -51,3 +51,21 @@ type Builtin struct {
 type Array struct {
 	Elements []Object
 }
+
+type Hash struct {
+	Pairs map[HashKey]HashPair
+}
+
+type HashKey struct {
+	Type  ObjectType
+	Value uint64
+}
+
+type HashPair struct {
+	Key   Object
+	Value Object
+}
+
+type Hashable interface {
+	HashKey() HashKey
+}

@@ -104,3 +104,8 @@ type IndexExpression struct {
 	Left  Expression
 	Index Expression
 }
+
+type HashLiteral struct {
+	Token token.Token // the '{' token
+	Pairs map[Expression]Expression
+}
