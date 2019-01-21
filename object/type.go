@@ -16,3 +16,7 @@ type Boolean struct {
 }
 
 type Null struct{}
+
+type ReturnValue struct {
+	Value Object
+}
