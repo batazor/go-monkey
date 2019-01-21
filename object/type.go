@@ -41,3 +41,9 @@ type Environment struct {
 	store map[string]Object
 	outer *Environment
 }
+
+type BuiltinFunction func(args ...Object) Object
+
+type Builtin struct {
+	Fn BuiltinFunction
+}
