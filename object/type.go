@@ -1,5 +1,7 @@
 package object
 
+import "github.com/batazor/go-monkey/ast"
+
 type ObjectType string
 
 type Object interface {
@@ -23,4 +25,15 @@ type ReturnValue struct {
 
 type Error struct {
 	Message string
+}
+
+type Function struct {
+	Parameters []*ast.Identifier
+	Body       *ast.BlockStatement
+	Env        *Environment
+}
+
+type Environment struct {
+	store map[string]Object
+	outer *Environment
 }
