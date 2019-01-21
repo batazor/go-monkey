@@ -20,3 +20,7 @@ type Null struct{}
 type ReturnValue struct {
 	Value Object
 }
+
+type Error struct {
+	Message string
+}
