@@ -93,3 +93,14 @@ type StringLiteral struct {
 	Token token.Token
 	Value string
 }
+
+type ArrayLiteral struct {
+	Token    token.Token // the '[' token
+	Elements []Expression
+}
+
+type IndexExpression struct {
+	Token token.Token // The [ token
+	Left  Expression
+	Index Expression
+}

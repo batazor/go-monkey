@@ -47,3 +47,7 @@ type BuiltinFunction func(args ...Object) Object
 type Builtin struct {
 	Fn BuiltinFunction
 }
+
+type Array struct {
+	Elements []Object
+}
