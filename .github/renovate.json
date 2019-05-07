@@ -1,0 +1,10 @@
+
+{
+  "extends": ["config:base"],
+  "rangeStrategy": "bump",
+  "baseBranches": ["master"],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  }
+}
